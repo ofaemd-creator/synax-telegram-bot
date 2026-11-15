@@ -1,0 +1,27 @@
+name: SYNAX Telegram Bot CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Verify (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run Telegram Bot Skill Unit & Integration Tests
+        run: python tests/test_telegram_bot.py -v
+      - name: Verify CLI E-Graph & Formal Prover Dispatch
+        run: |
+          python synax_telegram_bot.py --status
+          python synax_telegram_bot.py --cmd "/egraph (a * b + 1.0) + (a - a)"
+          python synax_telegram_bot.py --cmd "/prove relu(a - b)"

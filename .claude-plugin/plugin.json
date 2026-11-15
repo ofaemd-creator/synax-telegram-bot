@@ -1,0 +1,8 @@
+{
+  "name": "synax-telegram-bot",
+  "version": "1.0.0",
+  "description": "Zero-dependency Telegram Bot & Remote Compiler/Agent Skill for SYNAX, Claude Code, OpenAI Codex, and Google Antigravity.",
+  "author": "Dr. Omer Faruk Aydin",
+  "license": "Apache-2.0",
+  "skills": ["skills/synax-telegram-bot/SKILL.md"]
+}
