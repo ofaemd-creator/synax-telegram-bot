@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/hero.jpg" alt="SYNAX Telegram Bot — Live @synax_compiler_bot Remote Multi-Agent Bridge" width="100%">
+</p>
+
 # 🤖 SYNAX Telegram Bot (`synax-telegram-bot`)
 
 [![CI](https://img.shields.io/github/actions/workflow/status/ofaemd-creator/synax-telegram-bot/ci.yml?branch=main&style=for-the-badge&label=Cross-Platform_CI)](https://github.com/ofaemd-creator/synax-telegram-bot/actions)
